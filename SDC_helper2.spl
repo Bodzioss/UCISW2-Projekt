@@ -1,0 +1,11 @@
+[Inputs]
+DO_Rdy
+Busy
+Clk
+Button
+=DO[7:0]=
+[Outputs]
+DO_Pop
+=DO_Out[7:0]=
+=DO_Out1[7:0]=
+[BiDir]

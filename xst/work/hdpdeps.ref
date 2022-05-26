@@ -1,0 +1,25 @@
+V3 20
+FL C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf 2022/04/28.13:41:30 P.20131013
+EN work/Plytka 1651146229 FL C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/Plytka/BEHAVIORAL 1651146230 \
+      FL C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf EN work/Plytka 1651146229 \
+      CP SDC_FileReader CP RotaryEnc CP VCC CP GND CP BUF
+FL C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.vhd 2022/04/28.13:56:50 P.20131013
+EN work/SDC_helper2 1651147019 FL C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/SDC_helper2/Behavioral 1651147020 \
+      FL C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.vhd EN work/SDC_helper2 1651147019
+FL C:/Users/lab/Desktop/Vaw/Wav/Test_SDCard.vhf 2022/04/13.13:18:45 P.20131013
+EN work/Test_SDCard 1649848728 FL C:/Users/lab/Desktop/Vaw/Wav/Test_SDCard.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/Test_SDCard/BEHAVIORAL 1649848729 \
+      FL C:/Users/lab/Desktop/Vaw/Wav/Test_SDCard.vhf EN work/Test_SDCard 1649848728 \
+      CP SDC_FileReader CP VGAtxt48x20 CP RotaryEnc CP AND2B1 CP BUF CP VCC CP GND
+FL F:/STUDIA/UCISW2/Wav1/SDC_Help3.vhd 2022/05/25.22:24:17 P.20131013
+EN work/SDC_Help3 1653510270 FL F:/STUDIA/UCISW2/Wav1/SDC_Help3.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/SDC_Help3/Behavioral 1653510271 \
+      FL F:/STUDIA/UCISW2/Wav1/SDC_Help3.vhd EN work/SDC_Help3 1653510270

@@ -1,0 +1,241 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'Plytka'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off
+-c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Thu Apr 28 13:44:00 2022
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           461 out of   9,312    4%
+  Number of 4 input LUTs:             1,286 out of   9,312   13%
+Logic Distribution:
+  Number of occupied Slices:            785 out of   4,656   16%
+    Number of Slices containing only related logic:     785 out of     785 100%
+    Number of Slices containing unrelated logic:          0 out of     785   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,367 out of   9,312   14%
+    Number used as logic:             1,284
+    Number used as a route-thru:         81
+    Number used as Shift registers:       2
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 22 out of     232    9%
+  Number of RAMB16s:                      1 out of      20    5%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                3.36
+
+Peak Memory Usage:  4420 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:LIT:243 - Logical network XLXI_7/RotR has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal Clk_50MHz are pushed forward
+   through input buffer.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   3 block(s) removed
+  25 block(s) optimized away
+   5 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "XLXI_2/XLXI_94/Res_Abort/DInToggle_cmp_eq0000" is sourceless and has
+been removed.
+The signal "XLXI_2/XLXI_94/Res_Abort/DInToggle_not0001" is sourceless and has
+been removed.
+The signal "XLXI_2/XLXI_94/NextState_cmp_ne001046" is sourceless and has been
+removed.
+The signal "XLXI_7/RotR" is sourceless and has been removed.
+The signal "XLXI_7/rotary_q2_inv" is sourceless and has been removed.
+ Sourceless block "XLXI_7/RotR" (SFF) removed.
+Unused block "XLXI_2/XLXI_94/NextState_cmp_ne001046" (ROM) removed.
+Unused block "XLXI_7/rotary_q2_inv1_INV_0" (BUF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+LUT4 		XLXI_2/XLXI_94/NextState_cmp_ne000847_F
+   optimized to 0
+LUT2 		XLXI_2/XLXI_94/NextState_cmp_ne000847_G
+   optimized to 0
+LUT4 		XLXI_2/XLXI_94/NextState_cmp_ne000933
+   optimized to 0
+LUT3_L 		XLXI_2/XLXI_94/NextState_cmp_ne000968
+   optimized to 0
+LOCALBUF 		XLXI_2/XLXI_94/NextState_cmp_ne000968/LUT3_L_BUF
+LUT2 		XLXI_2/XLXI_94/NextState_cmp_ne00099
+   optimized to 1
+LUT2_L 		XLXI_2/XLXI_94/NextState_cmp_ne00107
+   optimized to 0
+LOCALBUF 		XLXI_2/XLXI_94/NextState_cmp_ne00107/LUT2_L_BUF
+FDE 		XLXI_2/XLXI_94/Res_Abort/DInToggle
+   optimized to 0
+FD 		XLXI_2/XLXI_94/Res_Abort/DInToggle_SR_0
+   optimized to 0
+FD 		XLXI_2/XLXI_94/Res_Abort/DInToggle_SR_1
+   optimized to 0
+LUT2 		XLXI_2/XLXI_94/Res_Abort/DInToggle_cmp_eq00001
+   optimized to 0
+INV 		XLXI_2/XLXI_94/Res_Abort/DInToggle_not00011_INV_0
+FD 		XLXI_2/XLXI_94/Res_Abort/DIn_SR_0
+   optimized to 0
+FD 		XLXI_2/XLXI_94/Res_Abort/DIn_SR_1
+   optimized to 0
+LUT2 		XLXI_2/XLXI_94/Res_Abort/Mxor_DOut_Result1
+   optimized to 0
+LUT3 		XLXI_2/XLXI_94/State_mux0002<9>131
+   optimized to 1
+GND 		XLXI_2/XST_GND
+VCC 		XLXI_2/XST_VCC
+GND 		XLXI_37
+VCC 		XLXI_49
+GND 		XLXI_7/XST_GND
+VCC 		XLXI_7/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clk_50MHz                          | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| Led<0>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Led<1>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Led_7                              | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Output<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<2>                          | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Output<3>                          | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Output<4>                          | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Output<5>                          | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Output<6>                          | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Output<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| RotA                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| RotB                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SDC_MISO                           | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| SDC_MOSI                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| SDC_SCK                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| SDC_SS                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| SW_0                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SW_1                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SW_2                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SW_3                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

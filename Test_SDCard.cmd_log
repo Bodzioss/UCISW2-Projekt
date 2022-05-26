@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/lab/Desktop/Vaw/Wav/Test_SDCard.xst" -ofn "C:/Users/lab/Desktop/Vaw/Wav/Test_SDCard.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/lab/Downloads/Test_SDCard/GenIO.ucf -uc C:/Users/lab/Downloads/Test_SDCard/USB_PS2_SDC.ucf -p xc3s500e-fg320-4 Test_SDCard.ngc Test_SDCard.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test_SDCard_map.ncd Test_SDCard.ngd Test_SDCard.pcf 
+par -w -intstyle ise -ol high -t 1 Test_SDCard_map.ncd Test_SDCard.ncd Test_SDCard.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test_SDCard.twx Test_SDCard.ncd -o Test_SDCard.twr Test_SDCard.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/lab/Downloads/Test_SDCard/GenIO.ucf -uc C:/Users/lab/Downloads/Test_SDCard/USB_PS2_SDC.ucf -p xc3s500e-fg320-4 Test_SDCard.ngc Test_SDCard.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test_SDCard_map.ncd Test_SDCard.ngd Test_SDCard.pcf 
+par -w -intstyle ise -ol high -t 1 Test_SDCard_map.ncd Test_SDCard.ncd Test_SDCard.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test_SDCard.twx Test_SDCard.ncd -o Test_SDCard.twr Test_SDCard.pcf 

@@ -1,0 +1,428 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Plytka.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Plytka.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Plytka"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Plytka
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf" in Library work.
+Architecture behavioral of Entity plytka is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Plytka> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Plytka> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf" line 97: Instantiating black box module <SDC_FileReader>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf" line 115: Unconnected output port 'RotR' of component 'RotaryEnc'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf" line 115: Instantiating black box module <RotaryEnc>.
+Entity <Plytka> analyzed. Unit <Plytka> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Plytka>.
+    Related source file is "C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf".
+WARNING:Xst:653 - Signal <XLXI_2_Reset_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_2_Abort_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <Plytka> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <SDC_FileReader.ngc>.
+Reading core <RotaryEnc.ngc>.
+Loading core <SDC_FileReader> for timing and area information for instance <XLXI_2>.
+Loading core <RotaryEnc> for timing and area information for instance <XLXI_7>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Plytka> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Plytka, actual ratio is 16.
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_11> in Unit <XLXI_2> is equivalent to the following FF/Latch : <XLXI_94/State_11_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_15> in Unit <XLXI_2> is equivalent to the following FF/Latch : <XLXI_94/State_15_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/SpC_1> in Unit <XLXI_2> is equivalent to the following FF/Latch : <XLXI_94/SpC_1_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_11> in Unit <XLXI_2> is equivalent to the following FF/Latch : <XLXI_94/State_11_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_15> in Unit <XLXI_2> is equivalent to the following FF/Latch : <XLXI_94/State_15_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/SpC_1> in Unit <XLXI_2> is equivalent to the following FF/Latch : <XLXI_94/SpC_1_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Plytka.ngr
+Top Level Output File Name         : Plytka
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 1970
+#      BUF                         : 4
+#      GND                         : 3
+#      INV                         : 46
+#      LUT1                        : 81
+#      LUT2                        : 184
+#      LUT2_D                      : 9
+#      LUT2_L                      : 21
+#      LUT3                        : 259
+#      LUT3_D                      : 9
+#      LUT3_L                      : 11
+#      LUT4                        : 629
+#      LUT4_D                      : 62
+#      LUT4_L                      : 85
+#      MULT_AND                    : 10
+#      MUXCY                       : 247
+#      MUXF5                       : 58
+#      MUXF6                       : 9
+#      OR2                         : 2
+#      VCC                         : 3
+#      XORCY                       : 238
+# FlipFlops/Latches                : 467
+#      FD                          : 72
+#      FDE                         : 135
+#      FDR                         : 21
+#      FDRE                        : 100
+#      FDRS                        : 4
+#      FDRSE                       : 3
+#      FDS                         : 130
+#      FDSE                        : 2
+# RAMS                             : 1
+#      RAMB16_S9_S9                : 1
+# Shift Registers                  : 2
+#      SRL16                       : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 7
+#      OBUF                        : 14
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      788  out of   4656    16%  
+ Number of Slice Flip Flops:            467  out of   9312     5%  
+ Number of 4 input LUTs:               1398  out of   9312    15%  
+    Number used as logic:              1396
+    Number used as Shift registers:       2
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    232     9%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50MHz                          | BUFGP                  | 470   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.690ns (Maximum Frequency: 85.543MHz)
+   Minimum input arrival time before clock: 9.038ns
+   Maximum output required time after clock: 10.292ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_50MHz'
+  Clock period: 11.690ns (frequency: 85.543MHz)
+  Total number of paths / destination ports: 63219 / 980
+-------------------------------------------------------------------------
+Delay:               11.690ns (Levels of Logic = 36)
+  Source:            XLXI_2/XLXI_94/State_21 (FF)
+  Destination:       XLXI_2/XLXI_94/adrSec_31 (FF)
+  Source Clock:      Clk_50MHz rising
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: XLXI_2/XLXI_94/State_21 to XLXI_2/XLXI_94/adrSec_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             79   0.591   1.452  XLXI_94/State_21 (XLXI_94/State<21>)
+     LUT2_D:I0->O         11   0.704   0.937  XLXI_94/adrSec_or00001 (XLXI_94/adrSec_or0000)
+     LUT4_D:I3->O         17   0.704   1.055  XLXI_94/adrSec_mux0005<25>25 (XLXI_94/N61)
+     LUT4:I3->O            1   0.704   0.424  XLXI_94/adrSec_mux0005<30>1 (XLXI_94/adrSec_mux0005<30>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_94/Madd_adrSec_share0000_lut<1> (XLXI_94/Madd_adrSec_share0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_94/Madd_adrSec_share0000_cy<1> (XLXI_94/Madd_adrSec_share0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<2> (XLXI_94/Madd_adrSec_share0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<3> (XLXI_94/Madd_adrSec_share0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<4> (XLXI_94/Madd_adrSec_share0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<5> (XLXI_94/Madd_adrSec_share0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<6> (XLXI_94/Madd_adrSec_share0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<7> (XLXI_94/Madd_adrSec_share0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<8> (XLXI_94/Madd_adrSec_share0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<9> (XLXI_94/Madd_adrSec_share0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<10> (XLXI_94/Madd_adrSec_share0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<11> (XLXI_94/Madd_adrSec_share0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<12> (XLXI_94/Madd_adrSec_share0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<13> (XLXI_94/Madd_adrSec_share0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<14> (XLXI_94/Madd_adrSec_share0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<15> (XLXI_94/Madd_adrSec_share0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<16> (XLXI_94/Madd_adrSec_share0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<17> (XLXI_94/Madd_adrSec_share0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<18> (XLXI_94/Madd_adrSec_share0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<19> (XLXI_94/Madd_adrSec_share0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<20> (XLXI_94/Madd_adrSec_share0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<21> (XLXI_94/Madd_adrSec_share0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<22> (XLXI_94/Madd_adrSec_share0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<23> (XLXI_94/Madd_adrSec_share0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<24> (XLXI_94/Madd_adrSec_share0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<25> (XLXI_94/Madd_adrSec_share0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<26> (XLXI_94/Madd_adrSec_share0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<27> (XLXI_94/Madd_adrSec_share0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<28> (XLXI_94/Madd_adrSec_share0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<29> (XLXI_94/Madd_adrSec_share0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<30> (XLXI_94/Madd_adrSec_share0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.424  XLXI_94/Madd_adrSec_share0000_xor<31> (XLXI_94/adrSec_share0000<31>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_94/adrSec_mux0004<31>23 (XLXI_94/adrSec_mux0004<31>23)
+     FDS:D                     0.308          XLXI_94/adrSec_31
+    ----------------------------------------
+    Total                     11.690ns (7.398ns logic, 4.292ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 11 / 5
+-------------------------------------------------------------------------
+Offset:              9.038ns (Levels of Logic = 9)
+  Source:            SW_1 (PAD)
+  Destination:       XLXI_2/XLXI_94/State_23 (FF)
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: SW_1 to XLXI_2/XLXI_94/State_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  SW_1_IBUF (SW_1_IBUF)
+     BUF:I->O              1   0.704   0.595  XLXI_44 (FName<1>)
+     begin scope: 'XLXI_2'
+     LUT4:I0->O            1   0.704   0.455  XLXI_94/NextState_and001032 (XLXI_94/NextState_and001032)
+     LUT4:I2->O            2   0.704   0.482  XLXI_94/NextState_and0010179_SW0 (N428)
+     LUT4_L:I2->LO         1   0.704   0.104  XLXI_94/State_mux0002<8>125_SW0_SW0_SW0_SW0 (N552)
+     LUT4:I3->O            1   0.704   0.424  XLXI_94/State_mux0002<8>125_SW0_SW0_SW0 (N548)
+     LUT4_L:I3->LO         1   0.704   0.104  XLXI_94/State_mux0002<8>125_SW0_SW0 (N400)
+     LUT4:I3->O            1   0.704   0.000  XLXI_94/State_mux0002<8>1791 (XLXI_94/State_mux0002<8>179)
+     FDS:D                     0.308          XLXI_94/State_23
+    ----------------------------------------
+    Total                      9.038ns (6.454ns logic, 2.584ns route)
+                                       (71.4% logic, 28.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 30 / 14
+-------------------------------------------------------------------------
+Offset:              10.292ns (Levels of Logic = 7)
+  Source:            XLXI_2/XLXI_89/cntBytes_5 (FF)
+  Destination:       Led_7 (PAD)
+  Source Clock:      Clk_50MHz rising
+
+  Data Path: XLXI_2/XLXI_89/cntBytes_5 to Led_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.591   0.706  XLXI_89/cntBytes_5 (XLXI_89/cntBytes<5>)
+     LUT2_L:I0->LO         1   0.704   0.104  XLXI_89/Full512_mux0000212 (XLXI_89/Full512_mux0000212)
+     LUT4:I3->O            2   0.704   0.451  XLXI_89/Full512_mux0000217 (XLXI_89/Full512_mux0000217)
+     LUT4_D:I3->O          5   0.704   0.808  XLXI_89/NextState_0_cmp_eq000011 (XLXI_89/N3)
+     LUT2:I0->O            1   0.704   0.420  XLXI_89/NotEmpty1 (XLXN_647)
+     OR2:I0->O             1   0.704   0.420  XLXI_92 (Busy)
+     end scope: 'XLXI_2'
+     OBUF:I->O                 3.272          Led_7_OBUF (Led_7)
+    ----------------------------------------
+    Total                     10.292ns (7.383ns logic, 2.909ns route)
+                                       (71.7% logic, 28.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.53 secs
+ 
+--> 
+
+Total memory usage is 4531680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
