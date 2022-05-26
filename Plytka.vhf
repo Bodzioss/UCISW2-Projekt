@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Plytka.vhf
--- /___/   /\     Timestamp : 04/28/2022 13:41:30
+-- /___/   /\     Timestamp : 05/26/2022 13:33:10
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/Vaw/Wav/Plytka.vhf -w C:/Users/lab/Desktop/Vaw/Wav/Plytka.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/UCISW2-Projekt-main/Plytka.vhf -w C:/Users/lab/Desktop/UCISW2-Projekt-main/Plytka.sch
 --Design Name: Plytka
 --Device: spartan3e
 --Purpose:
@@ -34,22 +34,33 @@ entity Plytka is
           SW_1      : in    std_logic; 
           SW_2      : in    std_logic; 
           SW_3      : in    std_logic; 
+          LCD_E     : out   std_logic; 
+          LCD_RS    : out   std_logic; 
+          LCD_RW    : out   std_logic; 
           Led       : out   std_logic_vector (1 downto 0); 
           Led_7     : out   std_logic; 
-          Output    : out   std_logic_vector (7 downto 0); 
+          Led_8     : out   std_logic; 
           SDC_MOSI  : out   std_logic; 
           SDC_SCK   : out   std_logic; 
-          SDC_SS    : out   std_logic);
+          SDC_SS    : out   std_logic; 
+          SF_CE     : out   std_logic; 
+          LCD_D     : inout std_logic_vector (3 downto 0));
 end Plytka;
 
 architecture BEHAVIORAL of Plytka is
    attribute BOX_TYPE   : string ;
-   signal FExt                    : std_logic_vector (1 downto 0);
-   signal FName                   : std_logic_vector (7 downto 0);
-   signal XLXN_10                 : std_logic;
-   signal XLXN_45                 : std_logic;
-   signal XLXI_2_Abort_openSignal : std_logic;
-   signal XLXI_2_Reset_openSignal : std_logic;
+   signal FExt                     : std_logic_vector (1 downto 0);
+   signal FName                    : std_logic_vector (7 downto 0);
+   signal Lines                    : std_logic_vector (63 downto 0);
+   signal XLXN_49                  : std_logic_vector (7 downto 0);
+   signal XLXN_51                  : std_logic;
+   signal XLXN_61                  : std_logic;
+   signal Led_7_DUMMY              : std_logic;
+   signal Led_8_DUMMY              : std_logic;
+   signal XLXI_2_Abort_openSignal  : std_logic;
+   signal XLXI_2_Reset_openSignal  : std_logic;
+   signal XLXI_68_Blank_openSignal : std_logic_vector (15 downto 0);
+   signal XLXI_68_Reset_openSignal : std_logic;
    component SDC_FileReader
       port ( SDC_MISO  : in    std_logic; 
              Start     : in    std_logic; 
@@ -93,20 +104,45 @@ architecture BEHAVIORAL of Plytka is
    end component;
    attribute BOX_TYPE of BUF : component is "BLACK_BOX";
    
+   component LCD1x64
+      port ( Clk_50MHz : in    std_logic; 
+             Reset     : in    std_logic; 
+             Line      : in    std_logic_vector (63 downto 0); 
+             Blank     : in    std_logic_vector (15 downto 0); 
+             LCD_D     : inout std_logic_vector (3 downto 0); 
+             LCD_E     : out   std_logic; 
+             LCD_RW    : out   std_logic; 
+             LCD_RS    : out   std_logic; 
+             SF_CE     : out   std_logic);
+   end component;
+   
+   component SDC_Help4
+      port ( DO_Rdy          : in    std_logic; 
+             Busy            : in    std_logic; 
+             Clk             : in    std_logic; 
+             DO              : in    std_logic_vector (7 downto 0); 
+             DO_Pop          : out   std_logic; 
+             Num_Channels    : out   std_logic_vector (7 downto 0); 
+             Sample_Rate     : out   std_logic_vector (15 downto 0); 
+             Bits_Per_Sample : out   std_logic_vector (7 downto 0));
+   end component;
+   
 begin
+   Led_7 <= Led_7_DUMMY;
+   Led_8 <= Led_8_DUMMY;
    XLXI_2 : SDC_FileReader
       port map (Abort=>XLXI_2_Abort_openSignal,
                 Clk_Sys=>Clk_50MHz,
                 Clk_50MHz=>Clk_50MHz,
-                DO_Pop=>XLXN_45,
+                DO_Pop=>Led_8_DUMMY,
                 FExt(1 downto 0)=>FExt(1 downto 0),
                 FName(7 downto 0)=>FName(7 downto 0),
                 Reset=>XLXI_2_Reset_openSignal,
                 SDC_MISO=>SDC_MISO,
-                Start=>XLXN_10,
-                Busy=>Led_7,
-                DO(7 downto 0)=>Output(7 downto 0),
-                DO_Rdy=>XLXN_45,
+                Start=>XLXN_61,
+                Busy=>Led_7_DUMMY,
+                DO(7 downto 0)=>XLXN_49(7 downto 0),
+                DO_Rdy=>XLXN_51,
                 Error(1 downto 0)=>Led(1 downto 0),
                 SDC_MOSI=>SDC_MOSI,
                 SDC_SCK=>SDC_SCK,
@@ -116,7 +152,7 @@ begin
       port map (Clk=>Clk_50MHz,
                 ROT_A=>RotA,
                 ROT_B=>RotB,
-                RotL=>XLXN_10,
+                RotL=>XLXN_61,
                 RotR=>open);
    
    XLXI_30 : VCC
@@ -152,6 +188,27 @@ begin
    
    XLXI_49 : VCC
       port map (P=>FExt(0));
+   
+   XLXI_68 : LCD1x64
+      port map (Blank(15 downto 0)=>XLXI_68_Blank_openSignal(15 downto 0),
+                Clk_50MHz=>Clk_50MHz,
+                Line(63 downto 0)=>Lines(63 downto 0),
+                Reset=>XLXI_68_Reset_openSignal,
+                LCD_E=>LCD_E,
+                LCD_RS=>LCD_RS,
+                LCD_RW=>LCD_RW,
+                SF_CE=>SF_CE,
+                LCD_D(3 downto 0)=>LCD_D(3 downto 0));
+   
+   XLXI_69 : SDC_Help4
+      port map (Busy=>Led_7_DUMMY,
+                Clk=>Clk_50MHz,
+                DO(7 downto 0)=>XLXN_49(7 downto 0),
+                DO_Rdy=>XLXN_51,
+                Bits_Per_Sample(7 downto 0)=>Lines(33 downto 26),
+                DO_Pop=>Led_8_DUMMY,
+                Num_Channels(7 downto 0)=>Lines(63 downto 56),
+                Sample_Rate(15 downto 0)=>Lines(24 downto 9));
    
 end BEHAVIORAL;
 

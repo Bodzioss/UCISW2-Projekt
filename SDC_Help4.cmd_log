@@ -1,0 +1,2 @@
+vhdtdtfi -lib work SDC_Help4.vhd -prj Wav -o SDC_Help4.spl -module SDC_Help4 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e SDC_Help4.spl C:/Users/lab/Desktop/UCISW2-Projekt-main/SDC_Help4.sym 

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    22:21:12 05/25/2022 
+-- Create Date:    12:51:50 05/26/2022 
 -- Design Name: 
--- Module Name:    SDC_Help3 - Behavioral 
+-- Module Name:    SDC_Help4 - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,28 +29,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity SDC_Help3 is
+entity SDC_Help4 is
     Port ( DO_Rdy : in  STD_LOGIC;
            DO : in  STD_LOGIC_VECTOR (7 downto 0);
            Busy : in  STD_LOGIC;
            Clk : in  STD_LOGIC;
-           New_Line : out  STD_LOGIC;
-           Abort : out  STD_LOGIC;
            DO_Pop : out  STD_LOGIC;
-           DO_Out : out  STD_LOGIC_VECTOR (7 downto 0));
-end SDC_Help3;
+           Num_Channels : out  STD_LOGIC_VECTOR (7 downto 0);
+           Sample_Rate : out  STD_LOGIC_VECTOR (15 downto 0);
+           Bits_Per_Sample : out  STD_LOGIC_VECTOR (7 downto 0));
+end SDC_Help4;
 
-architecture Behavioral of SDC_Help3 is
+architecture Behavioral of SDC_Help4 is
 
-type state_type is (Start , Wait_for_data, Send_with_NewLine, Send_NewLine, Send, Read_End);
+type state_type is (Start , Wait_for_data, Send_Num_Channels, Send_Sample_Rate, Send_Bits_Per_Sample);
 signal State, NextState : state_type;
 
 begin
-
 	process ( Clk )
 	begin
 	 if rising_edge( Clk ) then
-		State <= NextState;
+		if Busy = '0' then
+			State <= Start;
+		else
+			State <= NextState;
+		end if;
 	 end if;
 	end process;
 
@@ -81,48 +84,57 @@ begin
 
       -- Czekaj na dojœcie do odpowiednich pozycji nag³ówka
 		when Wait_for_data =>
-		if bit_nb = data1 or bit_nb = data3 then
-			NextState <= Send_with_NewLine;
+		if bit_nb = data1 then
+			NextState <= Send_Num_Channels;
 		elsif bit_nb = data2 then
-			NextState <= Send;
+			NextState <= Send_Sample_Rate;
+		elsif bit_nb = data2 then
+			NextState <= Send_Bits_Per_Sample;
 		else 
 			bit_nb := bit_nb + 1;
 			NextState <= Wait_for_data;
 		end if;
 			 
 
-      -- Przeœlij bajt dzakoñczony NewLine'm
-		when Send_with_NewLine =>
-			bit_nb := bit_nb + 1;
-			data_counter :=data_counter + 1;
-			if data_counter = 3 then
-				NextState <= Read_End;
-			else 
-				NextState <= Send_NewLine;
-			end if;
-			
-			
-		-- Przeœlij NewLine
-		when Send_NewLine =>
-			NextState <= Wait_for_data;
+
+
+
 		
       -- Przeœlij bajt
-		when Send =>
+		when Send_Num_Channels =>
 			bit_nb := bit_nb + 1;
-			NextState <= Send_with_NewLine;
+			NextState <= Wait_for_data;
+			
+			
+			
+      -- Przeœlij bajt dzakoñczony NewLine'm
+		when Send_Sample_Rate =>
+			bit_nb := bit_nb + 1;
+			data_counter :=data_counter + 1;
+			if data_counter = 1 then
+				NextState <= Wait_for_data;
+			else 
+				NextState <= Send_Sample_Rate;
+			end if;
+
 			
 		-- Przeœlij bajt
-		when Read_End =>
-				NextState <= Read_End;
+		when Send_Bits_Per_Sample =>
+			bit_nb := bit_nb + 1;
+			NextState <= Wait_for_data;
+			
 
     end case;
   end process;
-  
-DO_Out <= DO  when State = Send_with_NewLine and State = Send;
-New_Line <= '1' when State = Send_NewLine;
-Abort <= '1' when State = Read_End;
-DO_Pop <= '1' when State = Wait_for_data or State = Send_with_NewLine or State = Send else '0';
+
+Num_Channels <= DO  when State = Send_Num_Channels and rising_edge( Clk );
+--Sample_Rate <= DO  when State = Send_Sample_Rate;
+Bits_Per_Sample <= DO  when State = Send_Bits_Per_Sample and rising_edge( Clk );
+
+DO_Pop <= '1' when State = Wait_for_data or State = Send_Num_Channels or State = Send_Sample_Rate or State = Send_Bits_Per_Sample else '0';
 
 
 end Behavioral;
+
+
 
