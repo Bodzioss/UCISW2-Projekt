@@ -1,35 +1,37 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to F:/STUDIA/UCISW2/Wav1/xst/projnav.tmp
+--> Parameter TMPDIR set to F:/STUDIA/UCISW2/Github/UCISW2-Projekt/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.64 secs
+Total CPU time to Xst completion: 0.98 secs
  
---> Parameter xsthdpdir set to F:/STUDIA/UCISW2/Wav1/xst
+--> Parameter xsthdpdir set to F:/STUDIA/UCISW2/Github/UCISW2-Projekt/xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.65 secs
+Total CPU time to Xst completion: 0.98 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "F:/STUDIA/UCISW2/Wav1/SDC_Help3.vhd" in Library work.
-Entity <SDC_Help3> compiled.
-Entity <SDC_Help3> (Architecture <Behavioral>) compiled.
+WARNING:HDLParsers:3607 - Unit work/SDC_Help3 is now defined in a different file.  It was defined in "F:/STUDIA/UCISW2/Wav1/SDC_Help3.vhd", and is now defined in "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help3.vhd".
+WARNING:HDLParsers:3607 - Unit work/SDC_Help3/Behavioral is now defined in a different file.  It was defined in "F:/STUDIA/UCISW2/Wav1/SDC_Help3.vhd", and is now defined in "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help3.vhd".
+Compiling vhdl file "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help3.vhd" in Library work.
+Entity <sdc_help3> compiled.
+Entity <sdc_help3> (Architecture <behavioral>) compiled.
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.72 secs
  
 --> 
 
-Total memory usage is 4469760 kilobytes
+Total memory usage is 4469724 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

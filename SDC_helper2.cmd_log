@@ -1,6 +1,0 @@
-vhdtdtfi -lib work SDC_helper2.vhd -prj Wav -o SDC_helper2.spl -module SDC_helper2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e SDC_helper2.spl C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.sym 
-vhdtdtfi -lib work SDC_helper2.vhd -prj Wav -o SDC_helper2.spl -module SDC_helper2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e SDC_helper2.spl C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.sym 
-vhdtdtfi -lib work SDC_helper2.vhd -prj Wav -o SDC_helper2.spl -module SDC_helper2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e SDC_helper2.spl C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.sym 

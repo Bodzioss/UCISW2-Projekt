@@ -1,5 +1,0 @@
-set -tmpdir "C:/Users/lab/Desktop/Vaw/Wav/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/lab/Desktop/Vaw/Wav/xst"
-elaborate
--ifn SDC_helper2.prj
--ifmt mixed

@@ -82,12 +82,11 @@ begin
       -- Czekaj na dojœcie do odpowiednich pozycji nag³ówka
 		when Wait_for_data =>
 		if bit_nb = data1 or bit_nb = data3 then
-			bit_nb := bit_nb + 1;
 			NextState <= Send_with_NewLine;
 		elsif bit_nb = data2 then
-			bit_nb := bit_nb + 1;
 			NextState <= Send;
 		else 
+			bit_nb := bit_nb + 1;
 			NextState <= Wait_for_data;
 		end if;
 			 
