@@ -9,35 +9,33 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu May 26 14:35:43 2022
+Mapped Date    : Thu Jun 02 19:37:29 2022
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Total Number Slice Registers:         617 out of   9,312    6%
-    Number used as Flip Flops:          553
-    Number used as Latches:              64
-  Number of 4 input LUTs:             1,499 out of   9,312   16%
+  Number of Slice Flip Flops:           632 out of   9,312    6%
+  Number of 4 input LUTs:             1,472 out of   9,312   15%
 Logic Distribution:
-  Number of occupied Slices:            956 out of   4,656   20%
-    Number of Slices containing only related logic:     956 out of     956 100%
-    Number of Slices containing unrelated logic:          0 out of     956   0%
+  Number of occupied Slices:            946 out of   4,656   20%
+    Number of Slices containing only related logic:     946 out of     946 100%
+    Number of Slices containing unrelated logic:          0 out of     946   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,669 out of   9,312   17%
-    Number used as logic:             1,497
-    Number used as a route-thru:        170
+  Total Number of 4 input LUTs:       1,587 out of   9,312   17%
+    Number used as logic:             1,470
+    Number used as a route-thru:        115
     Number used as Shift registers:       2
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 23 out of     232    9%
+  Number of bonded IOBs:                 88 out of     232   37%
   Number of RAMB16s:                      1 out of      20    5%
-  Number of BUFGMUXs:                     3 out of      24   12%
+  Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.11
+Average Fanout of Non-Clock Nets:                3.32
 
 Peak Memory Usage:  4420 MB
 Total REAL time to MAP completion:  1 secs 
@@ -94,14 +92,14 @@ WARNING:Pack:1186 - One or more I/O components have conflicting property values.
 Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
-INFO:LIT:243 - Logical network N10 has no load.
-INFO:LIT:395 - The above info message is repeated 7 more times for the following
+INFO:LIT:243 - Logical network N14 has no load.
+INFO:LIT:395 - The above info message is repeated 6 more times for the following
    (max. 5 shown):
-   N11,
-   N12,
-   N9,
-   XLXI_7/RotR,
-   XLXI_68/genIOBUF[0].instIOBUF/O
+   N15,
+   N16,
+   N17,
+   XLXI_68/genIOBUF[0].instIOBUF/O,
+   XLXI_68/genIOBUF[1].instIOBUF/O
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:159 - Net Timing constraints on signal Clk_50MHz are pushed forward
@@ -112,9 +110,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   7 block(s) removed
-  63 block(s) optimized away
-   9 signal(s) removed
+   4 block(s) removed
+  26 block(s) optimized away
+   4 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -129,25 +127,15 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-The signal "XLXI_2/XLXI_94/Res_Abort/DInToggle_cmp_eq0000" is sourceless and has
-been removed.
-The signal "XLXI_2/XLXI_94/Res_Abort/DInToggle_not0001" is sourceless and has
-been removed.
 The signal "XLXI_2/XLXI_94/NextState_cmp_ne001046" is sourceless and has been
 removed.
-The signal "XLXI_7/RotR" is sourceless and has been removed.
-The signal "XLXI_7/rotary_q2_inv" is sourceless and has been removed.
- Sourceless block "XLXI_7/RotR" (SFF) removed.
-The signal "XLXI_68/cntDigit_0_2" is sourceless and has been removed.
 The signal "XLXI_68/genIOBUF[0].instIOBUF/O" is sourceless and has been removed.
 The signal "XLXI_68/genIOBUF[1].instIOBUF/O" is sourceless and has been removed.
 The signal "XLXI_68/genIOBUF[2].instIOBUF/O" is sourceless and has been removed.
 Unused block "XLXI_2/XLXI_94/NextState_cmp_ne001046" (ROM) removed.
-Unused block "XLXI_68/cntDigit_0_2" (FF) removed.
 Unused block "XLXI_68/genIOBUF[0].instIOBUF/IBUF" (BUF) removed.
 Unused block "XLXI_68/genIOBUF[1].instIOBUF/IBUF" (BUF) removed.
 Unused block "XLXI_68/genIOBUF[2].instIOBUF/IBUF" (BUF) removed.
-Unused block "XLXI_7/rotary_q2_inv1_INV_0" (BUF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -165,23 +153,6 @@ LUT2 		XLXI_2/XLXI_94/NextState_cmp_ne00099
 LUT2_L 		XLXI_2/XLXI_94/NextState_cmp_ne00107
    optimized to 0
 LOCALBUF 		XLXI_2/XLXI_94/NextState_cmp_ne00107/LUT2_L_BUF
-FDE 		XLXI_2/XLXI_94/Res_Abort/DInToggle
-   optimized to 0
-FD 		XLXI_2/XLXI_94/Res_Abort/DInToggle_SR_0
-   optimized to 0
-FD 		XLXI_2/XLXI_94/Res_Abort/DInToggle_SR_1
-   optimized to 0
-LUT2 		XLXI_2/XLXI_94/Res_Abort/DInToggle_cmp_eq00001
-   optimized to 0
-INV 		XLXI_2/XLXI_94/Res_Abort/DInToggle_not00011_INV_0
-FD 		XLXI_2/XLXI_94/Res_Abort/DIn_SR_0
-   optimized to 0
-FD 		XLXI_2/XLXI_94/Res_Abort/DIn_SR_1
-   optimized to 0
-LUT2 		XLXI_2/XLXI_94/Res_Abort/Mxor_DOut_Result1
-   optimized to 0
-LUT3 		XLXI_2/XLXI_94/State_mux0002<9>131
-   optimized to 1
 GND 		XLXI_2/XST_GND
 VCC 		XLXI_2/XST_VCC
 GND 		XLXI_37
@@ -202,62 +173,6 @@ LUT3 		XLXI_68/Mmux_Blank_mux0000_72
    optimized to 0
 LUT3 		XLXI_68/Mmux_Blank_mux0000_8
    optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_6
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_61
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_610
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_611
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_62
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_63
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_64
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_65
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_66
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_67
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_68
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_69
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_7
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_71
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_710
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_711
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_72
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_73
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_74
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_75
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_76
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_77
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_78
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_79
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_8
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_81
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_82
-   optimized to 0
-LUT3 		XLXI_68/Mmux_Digit_83
-   optimized to 0
 GND 		XLXI_68/XST_GND
 VCC 		XLXI_68/XST_VCC
 GND 		XLXI_7/XST_GND
@@ -274,6 +189,7 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Clk_50MHz                          | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| DO_Rdy                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 | LCD_D<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
 | LCD_D<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
 | LCD_D<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
@@ -285,6 +201,70 @@ Section 6 - IOB Properties
 | Led<1>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 | Led_7                              | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 | Led_8                              | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| Lines<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<12>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<13>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<14>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<15>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<16>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<17>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<18>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<19>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<20>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<21>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<22>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<23>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<24>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<25>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<26>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<27>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<28>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<29>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<30>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<31>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<32>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<33>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<34>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<35>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<36>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<37>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<38>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<39>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<40>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<41>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<42>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<43>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<44>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<45>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<46>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<47>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<48>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<49>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<50>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<51>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<52>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<53>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<54>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<55>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<56>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<57>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<58>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<59>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<60>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<61>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<62>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Lines<63>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | RotA                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
 | RotB                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
 | SDC_MISO                           | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |

@@ -1,10 +1,10 @@
-AR sdc_help4 behavioral F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.vhd sub00/vhpl09 1654159694
+AR sdc_help4 behavioral C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/SDC_Help4.vhd sub00/vhpl09 1654191438
 EN test_sdcard NULL C:/Users/lab/Desktop/Vaw/Wav/Test_SDCard.vhf sub00/vhpl00 1649848728
 AR test_sdcard behavioral C:/Users/lab/Desktop/Vaw/Wav/Test_SDCard.vhf sub00/vhpl01 1649848729
 EN sdc_help3 NULL C:/Users/lab/Desktop/UCISW2-Projekt-main/SDC_Help3.vhd sub00/vhpl06 1653560418
-EN sdc_help4 NULL F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.vhd sub00/vhpl08 1654159693
-AR plytka behavioral C:/Users/lab/Desktop/UCISW2-Projekt-main/Plytka.vhf sub00/vhpl03 1653568534
+EN sdc_help4 NULL C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/SDC_Help4.vhd sub00/vhpl08 1654191437
+AR plytka behavioral C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.vhf sub00/vhpl03 1654191440
 AR sdc_help3 behavioral C:/Users/lab/Desktop/UCISW2-Projekt-main/SDC_Help3.vhd sub00/vhpl07 1653560419
-EN plytka NULL C:/Users/lab/Desktop/UCISW2-Projekt-main/Plytka.vhf sub00/vhpl02 1653568533
+EN plytka NULL C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.vhf sub00/vhpl02 1654191439
 EN sdc_helper2 NULL C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.vhd sub00/vhpl04 1651147019
 AR sdc_helper2 behavioral C:/Users/lab/Desktop/Vaw/Wav/SDC_helper2.vhd sub00/vhpl05 1651147020

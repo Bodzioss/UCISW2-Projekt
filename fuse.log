@@ -1,10 +1,10 @@
-Running: F:\SOFTWARE\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Helper_test_isim_beh.exe -prj F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Helper_test_beh.prj work.Helper_test 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Helper_test_isim_beh.exe" -prj "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Helper_test_beh.prj" "work.Helper_test" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 12
 Turning on mult-threading, number of parallel sub-compilation jobs: 24 
 Determining compilation order of HDL files
-Parsing VHDL file "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.vhd" into library work
-Parsing VHDL file "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Helper_test.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/SDC_Help4.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Helper_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -13,8 +13,7 @@ Compiling package numeric_std
 Compiling architecture behavioral of entity SDC_Help4 [sdc_help4_default]
 Compiling architecture behavior of entity helper_test
 Time Resolution for simulation is 1ps.
-WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: System nie mo¿e odnale æ okre lonej  cie¿ki, "isim\Helper_test_isim_beh.exe.sim\libPortability.dll".
 Compiled 6 VHDL Units
-Built simulation executable F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Helper_test_isim_beh.exe
-Fuse Memory Usage: 36216 KB
-Fuse CPU Usage: 421 ms
+Built simulation executable C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Helper_test_isim_beh.exe
+Fuse Memory Usage: 35528 KB
+Fuse CPU Usage: 311 ms

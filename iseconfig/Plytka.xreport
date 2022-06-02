@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-06-02T11:38:28</DateModified>
+  <DateModified>2022-06-02T18:34:39</DateModified>
   <ModuleName>Plytka</ModuleName>
-  <SummaryTimeStamp>2022-05-26T14:29:39</SummaryTimeStamp>
-  <SavedFilePath>F:/STUDIA/UCISW2/Github/UCISW2-Projekt/iseconfig/Plytka.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/STUDIA/UCISW2/Github/UCISW2-Projekt\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2022-06-02T18:28:30</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/iseconfig/Plytka.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main\</ImplementationReportsDirectory>
   <DateInitialized>2022-05-18T13:28:54</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

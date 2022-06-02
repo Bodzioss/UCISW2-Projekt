@@ -20,9 +20,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -42,24 +43,20 @@ end SDC_Help4;
 
 architecture Behavioral of SDC_Help4 is
 
-signal data_counter : integer := 0;
-signal bit_nb : integer := 0;
-type state_type is (Start , Wait_for_data, Ready, Send_End);
+signal data_counter : unsigned (7 downto 0);
+signal bit_nb : unsigned (7 downto 0) := "00000000";
+type state_type is (Start , Wait_for_data, Ready,  Send_End);
 signal State, NextState : state_type;
 
 begin
 	process ( Clk )
 	begin
 	 if rising_edge( Clk ) then
-		if Busy = '0' then
-			State <= Start;
-		else
-			State <= NextState;
-		end if;
+		State <= NextState;
 	 end if;
 	end process;
 
-	process ( State, DO_Rdy )
+	process ( State, DO_Rdy , Busy )
 	  
 	  
 	  type INT_ARRAY is array (integer range <>) of integer;
@@ -76,11 +73,12 @@ begin
     -- Czekaj a¿ FileReader bêdzie gotowy
     case State is
       when Start =>
-			Num_Channels <= (others => '0');
-			Sample_Rate <= (others => '0');
-			Bits_Per_Sample <= (others => '0');
+			--Num_Channels <= (others => '0');
+			--Sample_Rate <= (others => '0');
+			--Bits_Per_Sample <= (others => '0');
+			--bit_nb <= (others => '0');
 			if DO_Rdy = '1' and Busy = '1' then
-				NextState <= Wait_for_data;
+				NextState <= Ready;
 			else
 				NextState <= Start;
 		end if;
@@ -90,41 +88,16 @@ begin
 	      -- Przeœlij bajt
 		when Ready =>
 			if DO_Rdy = '1' then
-				bit_nb <= bit_nb + 1;
 				NextState <= Wait_for_data;
+			elsif bit_nb = "11111111"  then
+				NextState <= Send_End;
+			else
+				NextState <= Ready;
 			end if;
 
       -- Czekaj na dojœcie do odpowiednich pozycji nag³ówka
 		when Wait_for_data =>
-		if bit_nb = data1 then
-			Num_Channels(7 downto 0) <= DO;
 			NextState <= Ready;
-		elsif bit_nb = data1+1 then
-			Num_Channels(15 downto 8) <= DO;
-			NextState <= Ready;
-		elsif bit_nb = data2 then
-			Sample_Rate(7 downto 0) <= DO;
-			NextState <= Ready;
-		elsif bit_nb = data2+1 then
-			Sample_Rate(15 downto 8) <= DO;
-			NextState <= Ready;
-		elsif bit_nb = data2+2 then
-			Sample_Rate(23 downto 16) <= DO;
-			NextState <= Ready;
-		elsif bit_nb = data2+3 then
-			Sample_Rate(31 downto 24) <= DO;
-			NextState <= Ready;
-		elsif bit_nb = data3 then
-			Bits_Per_Sample(7 downto 0) <= DO;
-			NextState <= Ready;
-		elsif bit_nb = data3 then
-			Bits_Per_Sample(15 downto 8) <= DO;
-			NextState <= Send_End;
-		else 
-			bit_nb <= bit_nb + 1;
-			NextState <= Ready;
-		end if;
-			 
 
 
 		when Send_End =>
@@ -132,12 +105,22 @@ begin
 
     end case;
   end process;
+  
 
---Num_Channels <= DO  when State = Send_Num_Channels and rising_edge( Clk );
---Sample_Rate <= DO  when State = Send_Sample_Rate;
---Bits_Per_Sample <= DO  when State = Send_Bits_Per_Sample and rising_edge( Clk );
+bit_nb <= bit_nb + 1  when State = Ready and rising_edge( Clk ) and DO_Rdy = '1';
 
-DO_Pop <= '1' when State = Wait_for_data else '0';
+Num_Channels(7 downto 0) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00010111" ;
+Num_Channels(15 downto 8) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00011000" ;
+
+Sample_Rate(7 downto 0) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00011001";
+Sample_Rate(15 downto 8) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00011010";
+Sample_Rate(23 downto 16) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00011011";
+Sample_Rate(31 downto 24) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00011100";
+
+Bits_per_sample(7 downto 0) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00100011" ;
+Bits_per_sample(15 downto 8) <= DO  when State = Wait_for_data and rising_edge( Clk ) and bit_nb = "00100100" ;
+
+DO_Pop <= '1' when State = Ready else '0';
 
 
 end Behavioral;

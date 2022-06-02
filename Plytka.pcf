@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu May 26 14:35:45 2022
+// Written by: Map P.20131013 on Thu Jun 02 19:37:30 2022
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,6 +16,7 @@ COMP "Led_7" LOCATE = SITE "F9" LEVEL 1;
 COMP "Led_8" LOCATE = SITE "D11" LEVEL 1;
 COMP "LCD_RS" LOCATE = SITE "L18" LEVEL 1;
 COMP "LCD_RW" LOCATE = SITE "L17" LEVEL 1;
+COMP "DO_Rdy" LOCATE = SITE "C11" LEVEL 1;
 COMP "SDC_SS" LOCATE = SITE "B6" LEVEL 1;
 COMP "Led<0>" LOCATE = SITE "F12" LEVEL 1;
 COMP "Led<1>" LOCATE = SITE "E12" LEVEL 1;

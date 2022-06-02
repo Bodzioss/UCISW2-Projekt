@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAB016-06::  Thu May 26 14:35:47 2022
+LAB016-08::  Thu Jun 02 19:37:32 2022
 
 par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
 
@@ -25,7 +25,7 @@ Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                          23 out of 232     9%
+ Number of External IOBs                          88 out of 232    37%
 
    Number of External Input IOBs                  8
 
@@ -33,10 +33,10 @@ Design Summary Report:
         Number of LOCed External Input IBUFs      8 out of 8     100%
 
 
-   Number of External Output IOBs                14
+   Number of External Output IOBs                79
 
-      Number of External Output IOBs             14
-        Number of LOCed External Output IOBs     14 out of 14    100%
+      Number of External Output IOBs             79
+        Number of LOCed External Output IOBs     15 out of 79     18%
 
 
    Number of External Bidir IOBs                  1
@@ -45,9 +45,9 @@ Design Summary Report:
         Number of LOCed External Bidir IOBs       1 out of 1     100%
 
 
-   Number of BUFGMUXs                        3 out of 24     12%
+   Number of BUFGMUXs                        1 out of 24      4%
    Number of RAMB16s                         1 out of 20      5%
-   Number of Slices                        956 out of 4656   20%
+   Number of Slices                        946 out of 4656   20%
       Number of SLICEMs                     11 out of 2328    1%
 
 
@@ -66,39 +66,48 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:471e66c1) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:41b444ae) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:471e66c1) REAL time: 1 secs 
+INFO:Place:834 - Only a subset of IOs are locked. Out of 80 IOs, 16 are locked and 64 are not locked. If you would like
+   to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:41b444ae) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:471e66c1) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:41b444ae) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-
-Phase 4.2  Initial Clock and IO Placement (Checksum:2cebe0d2) REAL time: 2 secs 
+...
+Phase 4.2  Initial Clock and IO Placement (Checksum:59a04e4e) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:2cebe0d2) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:59a04e4e) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:2cebe0d2) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:59a04e4e) REAL time: 2 secs 
 
-Phase 7.8  Global Placement
-.................
-.......................................................................................................
-...................
-............
-Phase 7.8  Global Placement (Checksum:88ca7a98) REAL time: 3 secs 
+Phase 7.3  Local Placement Optimization
+....
+Phase 7.3  Local Placement Optimization (Checksum:552eb576) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:88ca7a98) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:350daebc) REAL time: 2 secs 
 
-Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:270c390e) REAL time: 5 secs 
+Phase 9.8  Global Placement
+...
+.................................
+..........
+....
+Phase 9.8  Global Placement (Checksum:bef5ba22) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:270c390e) REAL time: 5 secs 
+Phase 10.5  Local Placement Optimization (Checksum:bef5ba22) REAL time: 3 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:5013b9a) REAL time: 5 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:5013b9a) REAL time: 5 secs 
 
 Total REAL time to Placer completion: 5 secs 
 Total CPU  time to Placer completion: 5 secs 
@@ -109,13 +118,13 @@ Writing design to file Plytka.ncd
 Starting Router
 
 
-Phase  1  : 6324 unrouted;      REAL time: 7 secs 
+Phase  1  : 6452 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 5832 unrouted;      REAL time: 7 secs 
+Phase  2  : 5955 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 1478 unrouted;      REAL time: 8 secs 
+Phase  3  : 1439 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 1478 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 1439 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
 Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
@@ -146,13 +155,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|     Clk_50MHz_BUFGP | BUFGMUX_X1Y11| No   |  418 |  0.082     |  0.199      |
-+---------------------+--------------+------+------+------------+-------------+
-|XLXI_69/State_cmp_eq |              |      |      |            |             |
-|                0003 | BUFGMUX_X1Y10| No   |   16 |  0.022     |  0.170      |
-+---------------------+--------------+------+------+------------+-------------+
-|XLXI_69/bit_nb_not00 |              |      |      |            |             |
-|                  01 |  BUFGMUX_X1Y0| No   |   17 |  0.031     |  0.170      |
+|     Clk_50MHz_BUFGP | BUFGMUX_X1Y11| No   |  459 |  0.084     |  0.201      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -172,8 +175,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |     6.895ns|    13.105ns|       0|           0
-  s HIGH 50%                                | HOLD        |     0.987ns|            |       0|           0
+  NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |     6.106ns|    13.894ns|       0|           0
+  s HIGH 50%                                | HOLD        |     0.968ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -195,7 +198,7 @@ Timing: Completed - No errors found.
 
 Number of error messages: 0
 Number of warning messages: 0
-Number of info messages: 0
+Number of info messages: 1
 
 Writing design to file Plytka.ncd
 
