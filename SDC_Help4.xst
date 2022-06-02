@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/lab/Desktop/UCISW2-Projekt-main/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/lab/Desktop/UCISW2-Projekt-main/xst"
+set -tmpdir "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/xst/projnav.tmp"
+set -xsthdpdir "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/xst"
 elaborate
 -ifn SDC_Help4.prj
 -ifmt mixed

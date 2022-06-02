@@ -5,7 +5,7 @@ Clk
 =DO[7:0]=
 [Outputs]
 DO_Pop
-=Num_Channels[7:0]=
-=Sample_Rate[15:0]=
-=Bits_Per_Sample[7:0]=
+=Num_Channels[15:0]=
+=Sample_Rate[31:0]=
+=Bits_Per_Sample[15:0]=
 [BiDir]

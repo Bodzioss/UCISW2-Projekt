@@ -1,2 +1,12 @@
 vhdtdtfi -lib work SDC_Help4.vhd -prj Wav -o SDC_Help4.spl -module SDC_Help4 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e SDC_Help4.spl C:/Users/lab/Desktop/UCISW2-Projekt-main/SDC_Help4.sym 
+vhdtdtfi -prj Wav -o F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.vhi -module SDC_Help4 -template F:/SOFTWARE/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work SDC_Help4.vhd 
+vhdtdtfi -lib work SDC_Help4.vhd -prj Wav -o SDC_Help4.spl -module SDC_Help4 -template F:/SOFTWARE/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e SDC_Help4.spl F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.sym 
+vhdtdtfi -prj Wav -o F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.vhi -module SDC_Help4 -template F:/SOFTWARE/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work SDC_Help4.vhd 
+vhdtdtfi -lib work SDC_Help4.vhd -prj Wav -o SDC_Help4.spl -module SDC_Help4 -template F:/SOFTWARE/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e SDC_Help4.spl F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.sym 
+vhdtdtfi -lib work SDC_Help4.vhd -prj Wav -o SDC_Help4.spl -module SDC_Help4 -template F:/SOFTWARE/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e SDC_Help4.spl F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.sym 
+vhdtdtfi -lib work SDC_Help4.vhd -prj Wav -o SDC_Help4.spl -module SDC_Help4 -template F:/SOFTWARE/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e SDC_Help4.spl F:/STUDIA/UCISW2/Github/UCISW2-Projekt/SDC_Help4.sym 

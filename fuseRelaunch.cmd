@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Helper_test_isim_beh.exe" -prj "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Helper_test_beh.prj" "work.Helper_test" 
