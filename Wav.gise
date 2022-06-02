@@ -52,7 +52,8 @@
     </file>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="Plytka.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Plytka.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Plytka_Plytka_sch_tb_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Plytka_Plytka_sch_tb_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Plytka_Plytka_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Plytka_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="Plytka_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Plytka_map.map" xil_pn:subbranch="Map"/>
@@ -82,6 +83,7 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="SDC_Help4.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="SDC_Help4.vhi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="SDC_Help4.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SDC_Help4_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SDC_helper2.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="SDC_helper2.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SDC_helper2.stx"/>
@@ -143,42 +145,55 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1654160260" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1654160260">
+    <transform xil_pn:end_ts="1654184697" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1654184697">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1654162793" xil_pn:in_ck="8428414031263986970" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1654162793">
+    <transform xil_pn:end_ts="1654191019" xil_pn:in_ck="8428414031263986970" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1654191019">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Helper_test.vhd"/>
-      <outfile xil_pn:name="SDC_Help3.vhd"/>
-      <outfile xil_pn:name="SDC_Help4.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1654162632" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8965587702098944018" xil_pn:start_ts="1654162632">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1654162634" xil_pn:in_ck="7047761085925751772" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3360519849445876400" xil_pn:start_ts="1654162632">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Plytka.vhf"/>
-    </transform>
-    <transform xil_pn:end_ts="1654160262" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6968362110488995562" xil_pn:start_ts="1654160262">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1654162793" xil_pn:in_ck="-8766136776607210367" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1654162793">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Helper_test.vhd"/>
-      <outfile xil_pn:name="Plytka.vhf"/>
-      <outfile xil_pn:name="SDC_Help3.vhd"/>
-      <outfile xil_pn:name="SDC_Help4.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1654162796" xil_pn:in_ck="-8766136776607210367" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4496826146366418523" xil_pn:start_ts="1654162793">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Helper_test.vhd"/>
+      <outfile xil_pn:name="SDC_Help3.vhd"/>
+      <outfile xil_pn:name="SDC_Help4.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1654184697" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8965587702098944018" xil_pn:start_ts="1654184697">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654191021" xil_pn:in_ck="7047761085925751772" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3360519849445876400" xil_pn:start_ts="1654191019">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Plytka.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1654184699" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6968362110488995562" xil_pn:start_ts="1654184699">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654191021" xil_pn:in_ck="-8766136776607210367" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1654191021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Helper_test.vhd"/>
+      <outfile xil_pn:name="Plytka.vhf"/>
+      <outfile xil_pn:name="SDC_Help3.vhd"/>
+      <outfile xil_pn:name="SDC_Help4.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1654191024" xil_pn:in_ck="-8766136776607210367" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4496826146366418523" xil_pn:start_ts="1654191021">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Helper_test_beh.prj"/>
       <outfile xil_pn:name="Helper_test_isim_beh.exe"/>
@@ -187,9 +202,11 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1654162796" xil_pn:in_ck="5196182036122075694" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8001562348022764818" xil_pn:start_ts="1654162796">
+    <transform xil_pn:end_ts="1654191024" xil_pn:in_ck="-7565360134589126029" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8001562348022764818" xil_pn:start_ts="1654191024">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Helper_test_isim_beh.wdb"/>
@@ -200,13 +217,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1653564791" xil_pn:in_ck="7047761085925751772" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1684377959290588611" xil_pn:start_ts="1653564789">
+    <transform xil_pn:end_ts="1654188978" xil_pn:in_ck="7047761085925751772" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1684377959290588611" xil_pn:start_ts="1654188977">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Plytka.vhf"/>
     </transform>
     <transform xil_pn:end_ts="1649850095" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6968362110488995562" xil_pn:start_ts="1649850095">
@@ -224,21 +237,16 @@
     <transform xil_pn:end_ts="1649850095" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1649850095">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1649850095" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7774403013649380788" xil_pn:start_ts="1649850095">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1653568538" xil_pn:in_ck="-95134049347585902" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5299572155438478400" xil_pn:start_ts="1653568529">
+    <transform xil_pn:end_ts="1654191443" xil_pn:in_ck="-4370796032787374220" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5299572155438478400" xil_pn:start_ts="1654191435">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="Plytka.jhd"/>
@@ -249,33 +257,34 @@
       <outfile xil_pn:name="Plytka.stx"/>
       <outfile xil_pn:name="Plytka.syr"/>
       <outfile xil_pn:name="Plytka.xst"/>
+      <outfile xil_pn:name="Plytka_Plytka_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="Plytka_Plytka_sch_tb_stx_beh.prj"/>
       <outfile xil_pn:name="Plytka_vhdl.prj"/>
       <outfile xil_pn:name="Plytka_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1653564292" xil_pn:in_ck="5078817571116" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5069202360637058871" xil_pn:start_ts="1653564292">
+    <transform xil_pn:end_ts="1654188330" xil_pn:in_ck="5078817571116" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5069202360637058871" xil_pn:start_ts="1654188330">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1653568542" xil_pn:in_ck="2712881337374679273" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8726695975246922807" xil_pn:start_ts="1653568538">
+    <transform xil_pn:end_ts="1654191448" xil_pn:in_ck="2712881337374679273" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8726695975246922807" xil_pn:start_ts="1654191443">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Plytka.bld"/>
       <outfile xil_pn:name="Plytka.ngd"/>
       <outfile xil_pn:name="Plytka_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1653568546" xil_pn:in_ck="4218597916410489695" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1653568542">
+    <transform xil_pn:end_ts="1654191452" xil_pn:in_ck="4218597916410489695" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1654191448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Plytka.pcf"/>
       <outfile xil_pn:name="Plytka_map.map"/>
       <outfile xil_pn:name="Plytka_map.mrp"/>
@@ -286,10 +295,9 @@
       <outfile xil_pn:name="Plytka_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1653568562" xil_pn:in_ck="-8978461312614104463" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-3872219738485705569" xil_pn:start_ts="1653568546">
+    <transform xil_pn:end_ts="1654191467" xil_pn:in_ck="-8978461312614104463" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-3872219738485705569" xil_pn:start_ts="1654191452">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Plytka.ncd"/>
       <outfile xil_pn:name="Plytka.pad"/>
       <outfile xil_pn:name="Plytka.par"/>
@@ -301,10 +309,9 @@
       <outfile xil_pn:name="Plytka_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1653568567" xil_pn:in_ck="-2611001525957124437" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1653568562">
+    <transform xil_pn:end_ts="1654191473" xil_pn:in_ck="-2611001525957124437" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1654191467">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Plytka.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="plytka.bgn"/>
@@ -313,10 +320,9 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1653568562" xil_pn:in_ck="2361013880371419863" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1653568559">
+    <transform xil_pn:end_ts="1654191467" xil_pn:in_ck="2361013880371419863" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1654191464">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Plytka.twr"/>
       <outfile xil_pn:name="Plytka.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

@@ -31,12 +31,9 @@
         <signal name="SDC_MOSI" />
         <signal name="SDC_SCK" />
         <signal name="SDC_SS" />
-        <signal name="DO(7:0)">
-        </signal>
-        <signal name="DO_Rdy">
-        </signal>
+        <signal name="DO(7:0)" />
+        <signal name="DO_Rdy" />
         <signal name="XLXN_61" />
-        <signal name="Led_8" />
         <signal name="Lines(63:0)" />
         <signal name="Lines(63:48)" />
         <signal name="Lines(47:16)" />
@@ -46,7 +43,11 @@
         <signal name="LCD_RW" />
         <signal name="LCD_D(3:0)" />
         <signal name="SF_CE" />
-        <signal name="XLXN_135" />
+        <signal name="XLXN_136" />
+        <signal name="XLXN_137" />
+        <signal name="XLXN_138" />
+        <signal name="XLXN_139" />
+        <signal name="Led_8" />
         <port polarity="Input" name="RotA" />
         <port polarity="Input" name="RotB" />
         <port polarity="Input" name="Clk_50MHz" />
@@ -60,7 +61,7 @@
         <port polarity="Output" name="SDC_MOSI" />
         <port polarity="Output" name="SDC_SCK" />
         <port polarity="Output" name="SDC_SS" />
-        <port polarity="Output" name="Led_8" />
+        <port polarity="Output" name="DO_Rdy" />
         <port polarity="Output" name="Lines(63:48)" />
         <port polarity="Output" name="Lines(47:16)" />
         <port polarity="Output" name="Lines(15:0)" />
@@ -69,6 +70,7 @@
         <port polarity="Output" name="LCD_RW" />
         <port polarity="BiDirectional" name="LCD_D(3:0)" />
         <port polarity="Output" name="SF_CE" />
+        <port polarity="Output" name="Led_8" />
         <blockdef name="RotaryEnc">
             <timestamp>2022-4-13T10:21:41</timestamp>
             <rect width="256" x="64" y="-256" height="192" />
@@ -142,7 +144,7 @@
             <line x2="0" y1="-96" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="SDC_Help4">
-            <timestamp>2022-6-2T9:10:41</timestamp>
+            <timestamp>2022-6-2T16:56:0</timestamp>
             <rect width="336" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
@@ -157,14 +159,24 @@
             <rect width="64" x="400" y="-44" height="24" />
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
+        <blockdef name="and2">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-64" y2="-64" x1="0" />
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="192" y1="-96" y2="-96" x1="256" />
+            <arc ex="144" ey="-144" sx="144" sy="-48" r="48" cx="144" cy="-96" />
+            <line x2="64" y1="-48" y2="-48" x1="144" />
+            <line x2="144" y1="-144" y2="-144" x1="64" />
+            <line x2="64" y1="-48" y2="-144" x1="64" />
+        </blockdef>
         <block symbolname="SDC_FileReader" name="XLXI_2">
             <blockpin signalname="SDC_MISO" name="SDC_MISO" />
             <blockpin signalname="XLXN_61" name="Start" />
             <blockpin signalname="FName(7:0)" name="FName(7:0)" />
             <blockpin name="Reset" />
             <blockpin signalname="Clk_50MHz" name="Clk_50MHz" />
-            <blockpin signalname="Led_8" name="DO_Pop" />
-            <blockpin name="Abort" />
+            <blockpin signalname="XLXN_139" name="DO_Pop" />
+            <blockpin signalname="XLXN_136" name="Abort" />
             <blockpin signalname="SDC_MOSI" name="SDC_MOSI" />
             <blockpin signalname="SDC_SCK" name="SDC_SCK" />
             <blockpin signalname="SDC_SS" name="SDC_SS" />
@@ -179,7 +191,7 @@
             <blockpin signalname="RotA" name="ROT_A" />
             <blockpin signalname="RotB" name="ROT_B" />
             <blockpin signalname="XLXN_61" name="RotL" />
-            <blockpin name="RotR" />
+            <blockpin signalname="XLXN_136" name="RotR" />
             <blockpin signalname="Clk_50MHz" name="Clk" />
         </block>
         <block symbolname="gnd" name="XLXI_32">
@@ -236,6 +248,11 @@
             <blockpin signalname="Lines(63:48)" name="Num_Channels(15:0)" />
             <blockpin signalname="Lines(47:16)" name="Sample_Rate(31:0)" />
             <blockpin signalname="Lines(15:0)" name="Bits_Per_Sample(15:0)" />
+        </block>
+        <block symbolname="and2" name="XLXI_73">
+            <blockpin signalname="DO_Rdy" name="I0" />
+            <blockpin signalname="Led_8" name="I1" />
+            <blockpin signalname="XLXN_139" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -364,11 +381,9 @@
             <wire x2="2720" y1="928" y2="928" x1="2000" />
         </branch>
         <branch name="DO(7:0)">
-            <wire x2="784" y1="512" y2="512" x1="704" />
             <wire x2="800" y1="512" y2="512" x1="784" />
             <wire x2="784" y1="512" y2="1280" x1="784" />
             <wire x2="2016" y1="1280" y2="1280" x1="784" />
-            <wire x2="704" y1="512" y2="528" x1="704" />
             <wire x2="2016" y1="1056" y2="1056" x1="2000" />
             <wire x2="2016" y1="1056" y2="1280" x1="2016" />
         </branch>
@@ -427,12 +442,6 @@
         <iomarker fontsize="28" x="144" y="224" name="RotB" orien="R180" />
         <instance x="2416" y="1728" name="XLXI_68" orien="R0">
         </instance>
-        <branch name="Led_8">
-            <wire x2="1424" y1="320" y2="320" x1="1264" />
-            <wire x2="1424" y1="320" y2="928" x1="1424" />
-            <wire x2="1584" y1="928" y2="928" x1="1424" />
-            <wire x2="1424" y1="144" y2="320" x1="1424" />
-        </branch>
         <branch name="Lines(63:0)">
             <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1856" y="320" type="branch" />
             <wire x2="1856" y1="272" y2="320" x1="1856" />
@@ -496,6 +505,12 @@
             <wire x2="1664" y1="208" y2="208" x1="736" />
             <wire x2="2016" y1="208" y2="208" x1="1664" />
             <wire x2="2016" y1="208" y2="992" x1="2016" />
+            <wire x2="2048" y1="992" y2="992" x1="2016" />
+            <wire x2="2560" y1="208" y2="208" x1="2016" />
+            <wire x2="1008" y1="624" y2="832" x1="1008" />
+            <wire x2="1072" y1="832" y2="832" x1="1008" />
+            <wire x2="2048" y1="624" y2="624" x1="1008" />
+            <wire x2="2048" y1="624" y2="992" x1="2048" />
             <wire x2="2016" y1="992" y2="992" x1="2000" />
         </branch>
         <instance x="800" y="544" name="XLXI_72" orien="R0">
@@ -503,9 +518,26 @@
         <iomarker fontsize="28" x="1584" y="176" name="Lines(47:16)" orien="R270" />
         <iomarker fontsize="28" x="1488" y="176" name="Lines(15:0)" orien="R270" />
         <iomarker fontsize="28" x="1664" y="176" name="Lines(63:48)" orien="R270" />
-        <branch name="XLXN_135">
-            <wire x2="304" y1="432" y2="432" x1="256" />
-            <wire x2="304" y1="432" y2="512" x1="304" />
+        <branch name="XLXN_136">
+            <wire x2="672" y1="224" y2="224" x1="592" />
+            <wire x2="672" y1="224" y2="992" x1="672" />
+            <wire x2="1584" y1="992" y2="992" x1="672" />
+        </branch>
+        <iomarker fontsize="28" x="2560" y="208" name="DO_Rdy" orien="R0" />
+        <instance x="1072" y="896" name="XLXI_73" orien="R0" />
+        <branch name="XLXN_139">
+            <wire x2="1360" y1="800" y2="800" x1="1328" />
+            <wire x2="1360" y1="800" y2="928" x1="1360" />
+            <wire x2="1584" y1="928" y2="928" x1="1360" />
+        </branch>
+        <branch name="Led_8">
+            <wire x2="992" y1="688" y2="768" x1="992" />
+            <wire x2="1072" y1="768" y2="768" x1="992" />
+            <wire x2="1344" y1="688" y2="688" x1="992" />
+            <wire x2="1344" y1="320" y2="320" x1="1264" />
+            <wire x2="1344" y1="320" y2="688" x1="1344" />
+            <wire x2="1424" y1="320" y2="320" x1="1344" />
+            <wire x2="1424" y1="144" y2="320" x1="1424" />
         </branch>
     </sheet>
 </drawing>

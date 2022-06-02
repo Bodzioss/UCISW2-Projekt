@@ -102,7 +102,7 @@ BEGIN
    process
 
       type t_FileOfCharacter is file of character;
-      file fTheFile : t_FileOfCharacter is in "C:\Users\marci\Downloads\1.wav";
+      file fTheFile : t_FileOfCharacter is in "C:\Users\lab\Downloads\1.wav";
       variable byte : character;
 
    begin

@@ -105,3 +105,120 @@ map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_
 par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
 bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.xst" -ofn "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Plytka.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test.ucf -p xc3s500e-fg320-4 Plytka.ngc Plytka.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Plytka_map.ncd Plytka.ngd Plytka.pcf 
+par -w -intstyle ise -ol high -t 1 Plytka_map.ncd Plytka.ncd Plytka.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Plytka.twx Plytka.ncd -o Plytka.twr Plytka.pcf -ucf test.ucf 
+bitgen -intstyle ise -f Plytka.ut Plytka.ncd 

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Helper_test.vhd";
+static const char *ng0 = "C:/Users/lab/Downloads/UCISW2-Projekt-main/UCISW2-Projekt-main/Helper_test.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="SDC_Help4">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-6-2T9:39:38</timestamp>
+    <timestamp>2022-6-2T17:9:17</timestamp>
     <pin polarity="Input" x="0" y="-224" name="DO_Rdy" />
     <pin polarity="Input" x="0" y="-160" name="Busy" />
     <pin polarity="Input" x="0" y="-96" name="Clk" />
