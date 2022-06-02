@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Plytka.vhf
--- /___/   /\     Timestamp : 05/26/2022 13:33:10
+-- /___/   /\     Timestamp : 06/02/2022 10:57:41
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/UCISW2-Projekt-main/Plytka.vhf -w C:/Users/lab/Desktop/UCISW2-Projekt-main/Plytka.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Plytka.vhf -w F:/STUDIA/UCISW2/Github/UCISW2-Projekt/Plytka.sch
 --Design Name: Plytka
 --Device: spartan3e
 --Purpose:

@@ -23,6 +23,10 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Helper_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Helper_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Helper_test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Helper_test_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Plytka.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Plytka.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="Plytka.jhd"/>
@@ -42,9 +46,13 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="Plytka.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="Plytka.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="Plytka.ut" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="Plytka.vhf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Plytka.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="Plytka.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Plytka.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Plytka_Plytka_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Plytka_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="Plytka_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Plytka_map.map" xil_pn:subbranch="Map"/>
@@ -72,6 +80,7 @@
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="SDC_Help4.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SDC_Help4.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="SDC_Help4.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="SDC_Help4.vhi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="SDC_Help4.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SDC_helper2.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="SDC_helper2.spl"/>
@@ -119,16 +128,74 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="plytka.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="plytka.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="plytka.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1654160260" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1654160260">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654162793" xil_pn:in_ck="8428414031263986970" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1654162793">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Helper_test.vhd"/>
+      <outfile xil_pn:name="SDC_Help3.vhd"/>
+      <outfile xil_pn:name="SDC_Help4.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1654162632" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8965587702098944018" xil_pn:start_ts="1654162632">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654162634" xil_pn:in_ck="7047761085925751772" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3360519849445876400" xil_pn:start_ts="1654162632">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Plytka.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1654160262" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6968362110488995562" xil_pn:start_ts="1654160262">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654162793" xil_pn:in_ck="-8766136776607210367" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1654162793">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Helper_test.vhd"/>
+      <outfile xil_pn:name="Plytka.vhf"/>
+      <outfile xil_pn:name="SDC_Help3.vhd"/>
+      <outfile xil_pn:name="SDC_Help4.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1654162796" xil_pn:in_ck="-8766136776607210367" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4496826146366418523" xil_pn:start_ts="1654162793">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Helper_test_beh.prj"/>
+      <outfile xil_pn:name="Helper_test_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1654162796" xil_pn:in_ck="5196182036122075694" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8001562348022764818" xil_pn:start_ts="1654162796">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Helper_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
     <transform xil_pn:end_ts="1649848724" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1649848724">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -137,6 +204,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Plytka.vhf"/>
     </transform>
     <transform xil_pn:end_ts="1649850095" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6968362110488995562" xil_pn:start_ts="1649850095">

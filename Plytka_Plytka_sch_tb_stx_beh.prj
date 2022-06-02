@@ -1,0 +1,3 @@
+vhdl isim_temp "SDC_Help4.vhd"
+vhdl isim_temp "Plytka.vhf"
+vhdl isim_temp "Sym_test.vhd"
